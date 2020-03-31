@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+</head>
+<body>
+    <input type="button" value="버튼" onclick="func()">
+    <button>버튼</button>
+    <script type="text/javascript">
+        function func(){
+            alert("클릭이 발생되었습니다! 이벤트 핸들러");
+        }
+        
+        document.querySelector("button").addEventListener('click', function(){
+            alert("Z")
+        });
+    </script>
+</body>
+</html>
