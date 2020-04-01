@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+</head>
+<body>
+    <button id="btn" class="ishereclass" class="wasclass">버튼</button>
+    <script>
+        var ele = document.getElementById("btn")
+        ele.classList.remove("wasclass")
+        ele.classList.add("addclass")
+        ele.classList.contains("ishereclass")
+    </script>
+</body>
+</html>
+
+<br>
+ele.classList.add("addclass")
+add를 통해 클래스를 추가<br>
+
+ele.classList.remove("wasclass")
+remove를 통해 원래 있던 wasclass를 제거했다.<br>
+
+ele.classList.contains("ishereclass")
+특정클래스 포함 여부를 확인. 있다면true 없다면 false
