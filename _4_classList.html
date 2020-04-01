@@ -6,15 +6,34 @@
     <title>Document</title>
     <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
 </head>
+    <style>
+        .ishereclass {
+          background-color:green;
+        }
+        .wasclass{
+          color: blue;
+        }
+        .addclass {
+            background-color: brown;
+        }
+      </style>
 <body>
-    <button id="btn" class="ishereclass" class="wasclass">버튼</button>
-    <script>
+    <button id="btn" class="wasclass ishereclass">버튼</button>
+    <button class="check">contains 검사</button>
+</body>
+<script>
+    $("#btn").click(function(){
         var ele = document.getElementById("btn")
         ele.classList.remove("wasclass")
         ele.classList.add("addclass")
         ele.classList.contains("ishereclass")
-    </script>
-</body>
+    })
+
+    document.querySelector(".check").addEventListener("click", function(){
+        var ele = document.getElementById("btn")
+        console.log(ele.classList.contains("ishereclass"))
+    })
+</script>
 </html>
 
 <br>
