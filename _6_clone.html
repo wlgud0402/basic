@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+</head>
+<body>
+    <div class="title"></div>
+    <h1>이건 복제될거얏!</h1>
+    <button>복제버튼</button>
+</body>
+    <script>
+        $( 'button' ).click( function() {
+          var title = $('h1').clone();
+          $('.title').html(title);
+        });
+      </script>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+</head>
+<body>
+    
+</body>
+<script>
+    function isDateInputSupported() {
+        const ele = document.createElement('input');
+        ele.setAttribute('type', 'date');
+        const invalidValue = 'not-a-valid-date';
+        ele.setAttribute('value', invalidValue);
+        return ele.value !== invalidValue;
+    };
+
+    console.log(isDateInputSupported())
+</script>
+</html>
