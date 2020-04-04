@@ -1,0 +1,26 @@
+<!-- 택스트 갯수세기 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+</head>
+<body>
+    <textarea maxlength="200" id="message"></textarea>
+    <div id="counter"></div>
+</body>
+    <script>
+        const messageEle = document.getElementById('message');
+        const counterELe = document.getElementById('counter');
+
+        messageEle.addEventListener('input', function(e){
+            const target = e.target;
+            const maxLength = target.getAttribute('maxlength');
+            const currentLength = target.value.length;
+
+            counterEle.innerHTML = `${currentLength}/${maxLength}`;
+        });
+    </script>
+</html>
