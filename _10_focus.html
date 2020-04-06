@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="fullName" />
+    <button id="edit">Edit</button>
+</body>
+<script>
+    const fullNameEle = document.getElementById('fullName');
+    const editEle = document.getElementById('edit');
+    
+    editEle.addEventListener('click', function(e) {
+        //인풋창에 포커스 옮김
+        fullNameEle.focus();
+    
+        //커서를 글자의 마지막에 둠
+        const length = fullNameEle.value.length;
+        fullNameEle.setSelectionRange(length, length);
+    });
+    </script>
+</html>
